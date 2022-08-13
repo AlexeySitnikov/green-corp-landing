@@ -9,7 +9,7 @@ header{
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  position:sticky;
+  position: sticky;
   background-color: #fff;
   top: 0;
   z-index: 1;
@@ -213,41 +213,30 @@ footer{
   }
 }
 
-@media (max-width: 375px){
+@media (max-width: 720px){
   header{
     padding-left: 10px;
     padding-right: 10px;    
   }
+  header a{
+    margin-right: 5px;
+  }
   .header__logo{
     height: 20px;
+  }
+  button{
+    padding: 10px;
   }
   .about{
     flex-direction: column-reverse;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .about__info{
-    max-width: 350px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-align: center;
   } 
-  .about__info h1{
-    text-align: center;
-  } 
-  .about__info p{
+   .about__info p{
     text-align: justify;
-  }
-  .form{
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  .form__container{
-    max-width: 350px;
-  }
-  footer{    
-    padding-left: 10px;
-    padding-right: 10px;
   }
   .about__image{
     width: 280px;
@@ -259,7 +248,23 @@ footer{
   .about h1{
     font-size: 36px;
     line-height: 40px;
+    text-align: center;
   }
+  .form{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .form h1{
+    font-size: 36px;
+    line-height: 40px;
+  }
+  footer{    
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
   footer {
     padding: 50px 10px;
   }
