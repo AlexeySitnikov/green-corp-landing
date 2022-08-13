@@ -177,6 +177,8 @@ footer{
 
 .footer__container{
   display: flex;
+  justify-content:center;
+  text-align: center;
 }
 
 .footer__copyright{
@@ -210,6 +212,59 @@ footer{
   }
   100%{
     transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px){
+  header{
+    padding-left: 20px;
+    padding-right: 20px;    
+  }
+  header a{
+    margin-right: 5px;
+  }
+  .header__logo{
+    height: 20px;
+  }
+  button{
+    padding: 10px;
+  }
+  .about{
+    flex-direction: column-reverse;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  } 
+  .about__image{
+    width: 280px;
+  }
+  .about__sun-image{
+    width: 75px;
+    height: 75px;
+  }
+  .about h1{
+    font-size: 36px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .form{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .form h1{
+    font-size: 36px;
+    line-height: 40px;
+  }
+  footer{    
+    padding-left: 20px;
+    padding-right: 20px;
+  }  
+  .footer__group{
+    margin-right: 80px;        
   }
 }
 
@@ -263,18 +318,13 @@ footer{
   footer{    
     padding-left: 10px;
     padding-right: 10px;
-  }
-  
-  footer {
-    padding: 50px 10px;
-  }
-
+  }  
   .footer__container {
     flex-direction: column;
-    text-align: center;    
-  }
-  
+    text-align: center;  
+       
+  } 
   .footer__group{
-    margin-right: 0;        
+    margin-right: 0px; 
   }
 }
