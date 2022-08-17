@@ -59,6 +59,10 @@ button:hover{
   position: absolute;
 }
 
+.animate__slow{
+  animation: slow 2s;
+}
+
 .about{
   display: flex;
   justify-content: space-around;
@@ -212,7 +216,12 @@ footer{
   }
   100%{
     transform: rotate(360deg);
-  }
+  }  
+}
+
+@keyframes slow {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 @media (max-width: 1024px){
