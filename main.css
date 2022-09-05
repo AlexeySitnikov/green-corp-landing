@@ -222,6 +222,12 @@ select{
   color: #22a030;
 }
 
+.features__border{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: solid 1px #e6eaf4;
+}
+
 input{
   outline: none;
 }
