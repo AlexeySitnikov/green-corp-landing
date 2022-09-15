@@ -282,13 +282,15 @@ select{
 }
 
 .promo{
-  display: flex;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px;
 }
+
 .promo__image {
   background-image: url(/img/promo.jpg);
   background-size: cover;  
-  flex-shrink: 0;
-  width: 100px;
+  /* flex-shrink: 0; */
 }
 
 .promo__right{
@@ -331,7 +333,13 @@ select{
   font-weight: 600;
 }
 
-.promo__right-card i{
+.promo__right-card .fa-circle{
+  font-size: 10px;
+  color: #ec6b29;
+  margin-right: 10px;
+}
+
+.promo__right-card .fa-chevron-right{
   font-size: 15px;
   margin-left: 5px;
 }
@@ -524,6 +532,27 @@ footer{
   .features__savings-box{
     margin-right: 10px;
     margin-bottom: 30px;
+  }
+
+  .promo{
+    display:flex;
+    flex-direction: column-reverse;
+  }
+
+  .promo__image {
+    height: 500px;
+    background-position: center;
+  }
+
+  .promo__right{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .promo__right-card{
+    width: auto;
   }
 
   .form{
