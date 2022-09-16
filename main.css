@@ -190,6 +190,7 @@ select{
   padding-right: 40px;
   border: solid #D9E4E6;
   border-radius: 5px;
+  background: #fff;
 }
 
 .card p{
@@ -226,6 +227,7 @@ select{
   margin-top: 50px;
   margin-bottom: 50px;
   border: solid 1px #e6eaf4;
+  width: 100%;
 }
 
 .features__feedback{
@@ -282,15 +284,15 @@ select{
 }
 
 .promo{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 0px;
+  display: flex;
 }
 
 .promo__image {
   background-image: url(/img/promo.jpg);
+  width: 50%;
   background-size: cover;  
-  /* flex-shrink: 0; */
+  background-position: center;
+  flex-shrink: 0;
 }
 
 .promo__right{
@@ -308,7 +310,7 @@ select{
   padding-left: 40px;
   padding-right: 40px;
   font-size: 20px;
-  line-height: 22px;
+  line-height: 26px;
   font-weight: 500;
   border-radius: 25px;
 }
@@ -316,6 +318,7 @@ select{
 .promo__right-card p{
   opacity: 0.8;
 }
+
 
 .promo__right-card div{
   display: flex;
@@ -331,6 +334,7 @@ select{
   padding-left: 30px;
   padding-right: 30px;
   font-weight: 600;
+  box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
 }
 
 .promo__right-card .fa-circle{
@@ -501,6 +505,13 @@ footer{
     grid-template-columns: auto;
   }
 
+  .features{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
   .features__feedback{
     display: flex;
     flex-direction: column;
@@ -524,6 +535,7 @@ footer{
   .features__feedback-right{
     flex-direction: column; 
     margin-top: 30px;
+    align-items: initial;
   }
 
   .features__box h3{
@@ -531,18 +543,17 @@ footer{
   }
 
   .features__savings-box{
-    margin-right: 10px;
+    margin-right: 0px;
     margin-bottom: 30px;
   }
 
   .promo{
-    display:flex;
     flex-direction: column-reverse;
   }
 
   .promo__image {
     height: 500px;
-    background-position: center;
+    width: 100%;
   }
 
   .promo__right{
