@@ -502,6 +502,7 @@ footer{
   }
 
   .features__feedback{
+    display: flex;
     flex-direction: column;
   }
 
