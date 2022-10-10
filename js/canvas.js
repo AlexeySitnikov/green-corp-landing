@@ -18,9 +18,10 @@ class Bubble {
   }
 
   init() {
-    this.color = COLORS[Math.floor(Math.random() * (COLORS.length-1 - 0) + 0)];
+    this.color = COLORS[Math.floor(Math.random() * COLORS.length)];
+    //console.log(this.color);
     this.size = generateDecimalBetween(1, 3);
-    this.alfa = generateDecimalBetween(5, 10)/10;
+    this.alpha = generateDecimalBetween(5, 10)/10;   
     this.translateX = generateDecimalBetween(0, this.canvasWidth);
     this.translateY = generateDecimalBetween(0, this.canvasHeight);
     this.velocity = generateDecimalBetween(20, 40);
@@ -60,9 +61,10 @@ class CanvasBackground {
   }
 
   generateBubbles(){
-    let bubblesList = [];
-    for (let i=0;i<BUBBLE_DENSITY-1;i++){
-      bubblesList[i] = new Bubble(this.canvas);
+    this.bubblesList = [];
+    for (let i=0;i<BUBBLE_DENSITY;i++){
+      //this.bubblesList[i] = new Bubble(this.canvas);
+      this.bubblesList.push(new Bubble(this.canvas))
     }
   }
 
@@ -70,7 +72,16 @@ class CanvasBackground {
     this.ctx.clearRect(0,0,this.canvas.clientWidth,this.canvas.clientHeight);
     this.bubblesList.forEach((bubble)=>{
       bubble.move();
-      this.ctx.translateX = bubble.translateX;
-      this.ctx.translateY = bubble.translateY;
+      this.ctx.translate(bubble.translateX, bubble.translateY);
+      this.ctx.beginPath();
+      this.ctx.arc(0, 0, bubble.size, 0, 2*Math.PI);          
+      this.ctx.fillStyle = "rgba(" + bubble.color + "," + bubble.alpha + ")";
+      this.ctx.fill();
+      this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
     });
+    requestAnimationFrame(this.animate.bind(this));
+  }
 }
+
+const asd = new CanvasBackground("orb-canvas");
+asd.start();
