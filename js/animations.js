@@ -1,5 +1,16 @@
 const INCREASE_NUMBER_ANIMATION_SPEED = 50;
 
+document.querySelector('#budget').addEventListener('change', function handleSelectChange(event) {
+  if (event.target.value === 'other') {
+    // Должны добавить еще одно текстовое поле
+  }
+
+  if (event.target.value !== 'other') {
+    // Удаляем ранее добавленное текстовое поле, если оно есть в DOM
+  }
+});
+
+
 function increaseNumberAnimationStep(i, element, endNumber) { 
   if (i <= endNumber) {
     if (i === endNumber) {
