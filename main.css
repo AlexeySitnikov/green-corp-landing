@@ -17,7 +17,7 @@ header{
   z-index: 1;
   left: 0;
   right: 0;
-  transition: opacity 0.25s ease;
+  transition: background 0.25s ease;
 }
 
 .header__scrolled{
