@@ -12,9 +12,9 @@
 <body>
   <header>
     <img class="header__logo" src="img/logo.svg" alt="logo">
-    <div>
-      <a href="#contacs">Контакты</a>
-      <button>Заказать</button>
+    <div class="header__controls">
+      <a href="#form">Контакты</a>
+      <button href="#">Заказать</button>
     </div>
   </header>
   <section class="about">
@@ -23,7 +23,8 @@
       <div class="about__info animate__animated animate__slideInLeft">
         <h1>Солнечные панели GreenRobotic</h1>
         <p>Производите дешёвую экологически чистую электроэнергию из солнечного света</p>
-        <button>Узнать подробнее <i class="fa-solid fa-angle-right"></i></button>      
+        <!-- <button class="more-button" href="#features">Узнать подробнее <i class="fas fa-angle-right"></i></button> class="fa-solid fa-angle-right" -->
+        <button class="more-button" href="#features">Узнать подробнее<i class="fa-solid fa-angle-right"></i></button>      
       </div>
     </div>
     
@@ -101,7 +102,7 @@
     </div>
   </section>
 
-  <section class="form">
+  <section class="form" id="form">
     <div class="form__container">
       <h1>Оставьте свои контакты</h1>
       <p>Поможем подобрать модель. 
